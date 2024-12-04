@@ -11,21 +11,17 @@ namespace Programm
         public static void Task1()
         {
             Console.WriteLine("Ответ на 1 задание: ");
-            // Создаем объект банковского счета
+
             BankAccount account = new BankAccount("1234567890", 1000.50m, AccountType.Savings);
 
-            // Вывод информации о счете
             account.DisplayAccountInfo();
 
-            // Обновляем баланс
             Console.WriteLine("Обновление баланса...");
             account.UpdateBalance(500.75m);
 
-            // Изменяем тип счета
             Console.WriteLine("Изменение типа счета...");
             account.ChangeAccountType(AccountType.Checking);
 
-            // Вывод обновленной информации
             Console.WriteLine("Обновленная информация о счете:");
             account.DisplayAccountInfo();
             Console.WriteLine();
@@ -79,23 +75,19 @@ namespace Programm
         }
         // #1
 
-        // Перечислимый тип для банковского счета
         public enum AccountType
             {
-                Savings,    // Сберегательный
-                Checking,   // Расчетный
-                Business    // Бизнес-счет
+                Savings,    
+                Checking,   
+                Business    
             }
 
-        // Класс банковского счета
         public class BankAccount
         {
-            // Закрытые поля
             private string accountNumber;
             private decimal balance;
             private AccountType accountType;
 
-            // Конструктор для создания счета
             public BankAccount(string accountNumber, decimal initialBalance, AccountType accountType)
             {
                 this.accountNumber = accountNumber;
@@ -103,7 +95,6 @@ namespace Programm
                 this.accountType = accountType;
             }
 
-            // Метод для чтения информации о счете
             public void DisplayAccountInfo()
             {
                 Console.WriteLine("Информация о счете:");
@@ -112,26 +103,22 @@ namespace Programm
                 Console.WriteLine($"Тип счета: {accountType}");
             }
 
-            // Метод для изменения баланса
             public void UpdateBalance(decimal amount)
             {
                 balance += amount;
                 Console.WriteLine($"Баланс обновлен. Новый баланс: {balance:C}");
             }
 
-            // Метод для получения текущего баланса
             public decimal GetBalance()
             {
                 return balance;
             }
 
-            // Метод для получения типа счета
             public AccountType GetAccountType()
             {
                 return accountType;
             }
 
-            // Метод для изменения типа счета
             public void ChangeAccountType(AccountType newType)
             {
                 accountType = newType;
@@ -143,20 +130,17 @@ namespace Programm
 
         public enum AccountType2
         {
-            Savings2,    // Сберегательный
-            Checking2,   // Расчетный
-            Business2    // Бизнес-счет
+            Savings2,
+            Checking2,
+            Business2
         }
 
-        // Класс банковского счета
         public class BankAccount2
         {
-            // Закрытые поля
             private string accountNumber2;
             private decimal balance2;
             private AccountType2 accountType2;
 
-            // Конструктор для создания счета
             public BankAccount2(string accountNumber2, decimal initialBalance2, AccountType2 accountType2)
             {
                 this.accountNumber2 = accountNumber2;
@@ -164,7 +148,6 @@ namespace Programm
                 this.accountType2 = accountType2;
             }
 
-            // Метод для чтения информации о счете
             public void DisplayAccountInfo2()
             {
                 Console.WriteLine("Информация о счете:");
@@ -173,26 +156,22 @@ namespace Programm
                 Console.WriteLine($"Тип счета: {accountType2}");
             }
 
-            // Метод для изменения баланса
             public void UpdateBalance2(decimal amount2)
             {
                 balance2 += amount2;
                 Console.WriteLine($"Баланс обновлен. Новый баланс: {balance2:C}");
             }
 
-            // Метод для получения текущего баланса
             public decimal GetBalance2()
             {
                 return balance2;
             }
 
-            // Метод для получения типа счета
             public AccountType2 GetAccountType2()
             {
                 return accountType2;
             }
 
-            // Метод для изменения типа счета
             public void ChangeAccountType2(AccountType2 newType2)
             {
                 accountType2 = newType2;
@@ -202,23 +181,19 @@ namespace Programm
 
         // #3
 
-        // Перечислимый тип для банковского счета
         enum AccountType3
         {
-            Savings3,    // Сберегательный
-            Checking3,   // Расчетный
-            Business3    // Бизнес-счет
+            Savings3,    
+            Checking3,   
+            Business3    
         }
 
-        // Класс банковского счета
         class BankAccount3
         {
-            // Закрытые поля
             private string accountNumber3;
             private decimal balance3;
             private AccountType3 accountType3;
 
-            // Конструктор для создания счета
             public BankAccount3(string accountNumber3, decimal initialBalance3, AccountType3 accountType3)
             {
                 this.accountNumber3= accountNumber3;
@@ -226,7 +201,6 @@ namespace Programm
                 this.accountType3 = accountType3;
             }
 
-            // Метод для чтения информации о счете
             public void DisplayAccountInfo3()
             {
                 Console.WriteLine("Информация о счете:");
@@ -235,7 +209,6 @@ namespace Programm
                 Console.WriteLine($"Тип счета: {accountType3}");
             }
 
-            // Метод для изменения баланса (вклад на счет)
             public void Deposit3(decimal amount3)
             {
                 if (amount3 <= 0)
@@ -248,7 +221,6 @@ namespace Programm
                 Console.WriteLine($"Вы успешно положили на счет {amount3:C}. Новый баланс: {balance3:C}");
             }
 
-            // Метод для снятия средств со счета
             public void Withdraw3(decimal amount3)
             {
                 if (amount3 <= 0)
@@ -267,19 +239,16 @@ namespace Programm
                 Console.WriteLine($"Вы успешно сняли со счета {amount3:C}. Новый баланс: {balance3:C}");
             }
 
-            // Метод для получения текущего баланса
             public decimal GetBalance3()
             {
                 return balance3;
             }
 
-            // Метод для получения типа счета
             public AccountType3 GetAccountType3()
             {
                 return accountType3;
             }
 
-            // Метод для изменения типа счета
             public void ChangeAccountType3(AccountType3 newType3)
             {
                 accountType3 = newType3;
